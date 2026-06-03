@@ -6,8 +6,10 @@
  */
 
 import { NextResponse } from 'next/server'
+import { hubEnabled, submitContact } from '@/lib/hub'
 
 const CONTACT_HUB_URL = process.env.CONTACT_HUB_URL
+const HUB_SITE_ID = process.env.HUB_SITE_ID
 
 export async function POST(req: Request) {
   let body: { name?: string; email?: string; phone?: string; message?: string }
@@ -30,6 +32,24 @@ export async function POST(req: Request) {
   }
   if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return NextResponse.json({ ok: false, error: 'Email không hợp lệ.' }, { status: 400 })
+  }
+
+  // Canonical write to the Content Hub (contact-submissions), so the owner sees
+  // leads in /admin — only once this site is a registered Hub tenant (HUB_SITE_ID
+  // set). Until the PM registers the tenant we stay on the GAS mirror below to
+  // avoid creating orphan, unattributed submissions in the shared Hub.
+  // Non-blocking: a hub hiccup never fails the user's submit.
+  if (hubEnabled() && HUB_SITE_ID) {
+    const res = await submitContact({
+      site: Number(HUB_SITE_ID),
+      name,
+      email,
+      phone,
+      message,
+    })
+    if (!res.ok) {
+      console.warn('[contact] hub contact-submissions write failed (non-fatal):', res.error)
+    }
   }
 
   // Fire-and-forget mirror to the GAS contact hub. Never block the user on it.

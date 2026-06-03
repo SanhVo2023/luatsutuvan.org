@@ -8,8 +8,10 @@ import { Scale, MapPin, Phone, Mail, MessageCircle, ShieldCheck } from 'lucide-r
 import { PILLARS } from '@/config/pillars'
 import { SITE, TRUST } from '@/config/site'
 import { APOLO } from '@/config/apolo'
+import { getSiteDisclaimer } from '@/lib/boilerplate'
 
-export function Footer() {
+export async function Footer() {
+  const disclaimer = await getSiteDisclaimer()
   return (
     <footer className="mt-24 border-t border-line bg-surface-alt">
       <div className="mx-auto max-w-7xl px-5 py-14 lg:px-8">
@@ -124,10 +126,7 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} {APOLO.vi.shortName}. Bảo lưu mọi quyền.
           </p>
-          <p className="max-w-xl sm:text-right">
-            Nội dung trên website mang tính tham khảo, không thay thế cho tư vấn
-            pháp lý trực tiếp đối với từng trường hợp cụ thể.
-          </p>
+          <p className="max-w-xl sm:text-right">{disclaimer}</p>
         </div>
       </div>
     </footer>

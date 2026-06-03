@@ -26,6 +26,7 @@ import {
   getRelatedGuides,
 } from '@/lib/guides'
 import { SITE } from '@/config/site'
+import { getBylineName, getSiteDisclaimer, LOCAL_GUIDE_DISCLAIMER } from '@/lib/boilerplate'
 
 export function generateStaticParams() {
   return getAllGuides().map((g) => ({
@@ -74,6 +75,10 @@ export default async function GuidePage({ params }: Params) {
 
   const url = `${SITE.url}/${pillarSlug}/${slug}/`
   const related = getRelatedGuides(guide)
+  const [byline, disclaimer] = await Promise.all([
+    getBylineName(),
+    getSiteDisclaimer(LOCAL_GUIDE_DISCLAIMER),
+  ])
 
   const schemas: object[] = [
     breadcrumbSchema([
@@ -128,7 +133,7 @@ export default async function GuidePage({ params }: Params) {
               <ListChecks className="size-4 text-teal" />
               {guide.wordCount.toLocaleString('vi-VN')} từ
             </span>
-            <span className="text-muted">Bởi Apolo Editorial Team</span>
+            <span className="text-muted">Bởi {byline}</span>
           </div>
 
           {guide.heroImage && (
@@ -181,10 +186,7 @@ export default async function GuidePage({ params }: Params) {
           <CtaBlock guideSlug={guide.slug} />
 
           <p className="not-prose mt-8 border-t border-line pt-5 text-sm leading-relaxed text-muted">
-            Nội dung bài viết mang tính tham khảo chung, không thay thế cho tư vấn
-            pháp lý đối với từng trường hợp cụ thể; quy định pháp luật có thể thay
-            đổi theo thời gian. Để được tư vấn chính xác, vui lòng liên hệ trực
-            tiếp với luật sư.
+            {disclaimer}
           </p>
         </article>
 
