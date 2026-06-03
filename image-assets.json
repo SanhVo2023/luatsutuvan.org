@@ -1,0 +1,79 @@
+{
+  "site": "luatsutuvan.org",
+  "style": "Calm flat-illustration, soft teal (#0A8F85) and sky-blue (#4DA3D4) palette, warm gold accents, generous whitespace, reassuring 'patient-guide' aesthetic, modern professional, white background. NOT the urgent green/orange look of the conversion sister site.",
+  "notes": "Reuse-first. The 'reuse' entries below map to pre-generated shared assets in shared-assets/r2-shared/MANIFEST.md and must NOT be regenerated. Only the 'generate' entries are site-specific. Run: npm run gen -- --site luatsutuvan.org --manifest <abs path to this file> --dry-run first.",
+  "assets": [
+    {
+      "id": "home-hero",
+      "category": "hero",
+      "generate": true,
+      "alt": "Luật sư Việt Nam trao đổi nhẹ nhàng, tin cậy với khách hàng trong văn phòng sáng",
+      "prompt": "Professional Vietnamese lawyer having a calm reassuring conversation with a client in a modern bright office, soft teal and blue color accents, warm natural lighting, trust and comfort feeling, clean modern interior with plants, professional photography style"
+    },
+    {
+      "id": "hub-khi-nao",
+      "category": "hub",
+      "generate": true,
+      "alt": "Người Việt suy tư bên bàn làm việc với tài liệu, tâm trạng cân nhắc",
+      "prompt": "Thoughtful Vietnamese person at a desk looking at documents with a contemplative expression, soft question mark light element in background, teal and cream color palette, reassuring mood, modern clean photography, natural lighting"
+    },
+    {
+      "id": "hub-hinh-thuc",
+      "category": "hub",
+      "generate": true,
+      "alt": "Ba hình thức tư vấn: trực tiếp, điện thoại và video call",
+      "prompt": "Split composition showing three consultation methods: in-person meeting, phone call, and laptop video call, all featuring Vietnamese professionals, soft teal palette, clean modern style, informational infographic feeling"
+    },
+    {
+      "id": "hub-chuan-bi",
+      "category": "hub",
+      "generate": true,
+      "alt": "Hồ sơ pháp lý được sắp xếp gọn gàng kèm checklist trên bàn làm việc",
+      "prompt": "Neatly organized stack of legal documents and folders on a clean modern desk with a checklist and pen, soft teal and white palette, organized and calming feeling, overhead angle, professional photography"
+    },
+    {
+      "id": "hub-faq",
+      "category": "hub",
+      "generate": true,
+      "alt": "Luật sư thân thiện đang giải đáp thắc mắc",
+      "prompt": "Friendly Vietnamese lawyer gesturing openly as if answering a question, speech bubble graphic elements, soft teal and sky blue palette, approachable and demystifying mood, modern clean background"
+    },
+    {
+      "id": "guide-process-generic",
+      "category": "content",
+      "generate": true,
+      "alt": "Quy trình tư vấn 4 bước minh họa phẳng",
+      "prompt": "Clean infographic-style illustration showing 4 connected steps with icons: question mark, document, handshake, checkmark, teal and blue gradient, modern flat design, white background, professional"
+    },
+    {
+      "id": "guide-checklist-visual",
+      "category": "content",
+      "generate": true,
+      "alt": "Checklist trên bảng kẹp với các dấu tích và biểu tượng tài liệu",
+      "prompt": "Illustration of a checklist on a clipboard with checkmarks, surrounded by floating document icons, teal and green accents, clean flat design, organized and reassuring feeling, white background"
+    },
+    {
+      "id": "landing-ly-hon",
+      "category": "content",
+      "reuse": "practice-family",
+      "reuseUrl": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-family-c50dd275.webp",
+      "alt": "Hai chiếc nhẫn cưới vàng trên góc một văn bản pháp lý",
+      "note": "Reuse shared family-law asset for ly-hon landing + checklist + khi-nao guides."
+    },
+    {
+      "id": "landing-dat-dai",
+      "category": "content",
+      "generate": true,
+      "alt": "Minh họa ngôi nhà với kính lúp xem xét nền móng, biểu tượng tài liệu",
+      "prompt": "Illustration of a house with a magnifying glass examining the foundation, document elements floating around, teal and earth tones, thorough and methodical feeling, modern flat design"
+    },
+    {
+      "id": "section-bg-teal",
+      "category": "decor",
+      "reuse": "gradient-mesh-teal",
+      "reuseUrl": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/decor/gradient-mesh-teal-5c1b8e44.webp",
+      "alt": "Nền gradient teal nhẹ",
+      "note": "Reuse shared teal gradient mesh for CTA/section backgrounds."
+    }
+  ]
+}
