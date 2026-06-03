@@ -18,7 +18,7 @@ export async function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1.1fr]">
           <div>
             <div className="flex items-center gap-2.5">
-              <span className="grid size-9 place-items-center rounded-xl bg-gradient-to-br from-teal to-teal-700 text-white">
+              <span className="grid size-9 place-items-center rounded-xl bg-gradient-to-br from-navy to-navy-700 text-white">
                 <Scale className="size-4.5" />
               </span>
               <span className="font-heading text-lg font-bold text-ink">
@@ -33,13 +33,13 @@ export async function Footer() {
                 href={APOLO.vi.parentBrandUrl}
                 target="_blank"
                 rel="noopener"
-                className="font-medium text-teal-700"
+                className="font-medium text-navy-700"
               >
                 Apolo Lawyers
               </a>
               .
             </p>
-            <div className="mt-5 inline-flex items-center gap-2 rounded-pill border border-teal/20 bg-teal-50 px-3.5 py-1.5 text-xs font-medium text-teal-700">
+            <div className="mt-5 inline-flex items-center gap-2 rounded-pill border border-navy/20 bg-navy-50 px-3.5 py-1.5 text-xs font-medium text-navy-700">
               <ShieldCheck className="size-3.5" />
               {TRUST.barAssociation}
             </div>
@@ -54,7 +54,7 @@ export async function Footer() {
                 <li key={p.id}>
                   <Link
                     href={`/${p.slug}/`}
-                    className="text-muted transition-colors hover:text-teal-700"
+                    className="text-muted transition-colors hover:text-navy-700"
                   >
                     {p.title}
                   </Link>
@@ -69,22 +69,22 @@ export async function Footer() {
             </p>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/ve-chung-toi/" className="text-muted hover:text-teal-700">
+                <Link href="/ve-chung-toi/" className="text-muted hover:text-navy-700">
                   Giới thiệu
                 </Link>
               </li>
               <li>
-                <Link href="/lien-he/" className="text-muted hover:text-teal-700">
+                <Link href="/lien-he/" className="text-muted hover:text-navy-700">
                   Liên hệ
                 </Link>
               </li>
               <li>
-                <Link href="/chinh-sach-bao-mat/" className="text-muted hover:text-teal-700">
+                <Link href="/chinh-sach-bao-mat/" className="text-muted hover:text-navy-700">
                   Chính sách bảo mật
                 </Link>
               </li>
               <li>
-                <Link href="/dieu-khoan-su-dung/" className="text-muted hover:text-teal-700">
+                <Link href="/dieu-khoan-su-dung/" className="text-muted hover:text-navy-700">
                   Điều khoản sử dụng
                 </Link>
               </li>
@@ -97,24 +97,24 @@ export async function Footer() {
             </p>
             <ul className="space-y-3 text-sm text-muted">
               <li className="flex gap-2.5">
-                <MapPin className="mt-0.5 size-4 shrink-0 text-teal" />
+                <MapPin className="mt-0.5 size-4 shrink-0 text-navy" />
                 <span>{SITE.address}</span>
               </li>
               <li className="flex gap-2.5">
-                <Phone className="mt-0.5 size-4 shrink-0 text-teal" />
-                <a href={SITE.phoneHref} className="hover:text-teal-700">
+                <Phone className="mt-0.5 size-4 shrink-0 text-navy" />
+                <a href={SITE.phoneHref} className="hover:text-navy-700">
                   {SITE.phone}
                 </a>
               </li>
               <li className="flex gap-2.5">
-                <Mail className="mt-0.5 size-4 shrink-0 text-teal" />
-                <a href={`mailto:${SITE.email}`} className="hover:text-teal-700">
+                <Mail className="mt-0.5 size-4 shrink-0 text-navy" />
+                <a href={`mailto:${SITE.email}`} className="hover:text-navy-700">
                   {SITE.email}
                 </a>
               </li>
               <li className="flex gap-2.5">
-                <MessageCircle className="mt-0.5 size-4 shrink-0 text-teal" />
-                <a href={SITE.zalo} target="_blank" rel="noopener" className="hover:text-teal-700">
+                <MessageCircle className="mt-0.5 size-4 shrink-0 text-navy" />
+                <a href={SITE.zalo} target="_blank" rel="noopener" className="hover:text-navy-700">
                   Zalo: Apolo Lawyers
                 </a>
               </li>

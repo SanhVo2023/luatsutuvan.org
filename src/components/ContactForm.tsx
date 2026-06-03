@@ -58,14 +58,14 @@ export function ContactForm() {
   }
 
   const inputCls =
-    'w-full rounded-xl border border-line bg-bg px-4 py-3 text-ink outline-none transition-colors placeholder:text-muted focus:border-teal focus:bg-white'
+    'w-full rounded-xl border border-line bg-bg px-4 py-3 text-ink outline-none transition-colors placeholder:text-muted focus:border-navy focus:bg-white'
 
   return (
     <form onSubmit={onSubmit} className="space-y-4">
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-ink-soft">
-            Họ và tên <span className="text-teal">*</span>
+            Họ và tên <span className="text-navy">*</span>
           </label>
           <input id="name" name="name" required className={inputCls} placeholder="Nguyễn Văn A" />
         </div>
@@ -84,7 +84,7 @@ export function ContactForm() {
       </div>
       <div>
         <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-ink-soft">
-          Câu hỏi của bạn <span className="text-teal">*</span>
+          Câu hỏi của bạn <span className="text-navy">*</span>
         </label>
         <textarea
           id="message"
@@ -106,7 +106,7 @@ export function ContactForm() {
           href={ctaUrl({ placement: 'form' })}
           target="_blank"
           rel="noopener"
-          className="font-medium text-teal-700 underline decoration-teal/30 underline-offset-2"
+          className="font-medium text-navy-700 underline decoration-navy/30 underline-offset-2"
         >
           luatsutuvan.net
         </a>
@@ -116,7 +116,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={state === 'sending'}
-        className="inline-flex items-center gap-2 rounded-pill bg-teal px-6 py-3.5 font-semibold text-white transition-colors hover:bg-teal-600 disabled:opacity-70"
+        className="inline-flex items-center gap-2 rounded-pill bg-navy px-6 py-3.5 font-semibold text-white transition-colors hover:bg-navy-600 disabled:opacity-70"
       >
         {state === 'sending' ? (
           <>

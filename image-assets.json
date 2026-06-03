@@ -1,79 +1,328 @@
 {
   "site": "luatsutuvan.org",
-  "style": "Calm flat-illustration, soft teal (#0A8F85) and sky-blue (#4DA3D4) palette, warm gold accents, generous whitespace, reassuring 'patient-guide' aesthetic, modern professional, white background. NOT the urgent green/orange look of the conversion sister site.",
-  "notes": "Reuse-first. The 'reuse' entries below map to pre-generated shared assets in shared-assets/r2-shared/MANIFEST.md and must NOT be regenerated. Only the 'generate' entries are site-specific. Run: npm run gen -- --site luatsutuvan.org --manifest <abs path to this file> --dry-run first.",
-  "assets": [
+  "style": "Oxford Navy & Gold international legal-authority. Deep oxford navy (#0B2A4A) + antique gold (#C2A14D) on warm ivory. Architectural & symbolic: marble, classical columns, scales of justice, gavel, gold linework, document detail. Dramatic cinematic lighting, premium, no people, no faces, no text.",
+  "notes": "Headless tool reads the `images` array. Reuse-first: field heroes + section bands intentionally echo the shared navy/gold/marble pool in shared-assets/r2-shared/MANIFEST.md so they reuse. Run: npm run gen -- --site luatsutuvan.org --manifest <abs path> --dry-run first.",
+  "images": [
     {
       "id": "home-hero",
+      "name": "Homepage hero",
       "category": "hero",
-      "generate": true,
-      "alt": "Luật sư Việt Nam trao đổi nhẹ nhàng, tin cậy với khách hàng trong văn phòng sáng",
-      "prompt": "Professional Vietnamese lawyer having a calm reassuring conversation with a client in a modern bright office, soft teal and blue color accents, warm natural lighting, trust and comfort feeling, clean modern interior with plants, professional photography style"
+      "aspect": "21:9",
+      "width": 1920,
+      "alt": "Đại sảnh pháp đình cổ điển với cột đá navy và cán cân công lý bằng vàng",
+      "style": "Deep oxford navy #0B2A4A + antique gold #C2A14D, architectural, cinematic god-ray lighting, premium, no people, no text",
+      "prompt": "Grand classical courthouse hall interior, oxford-navy marble columns receding into light, a single antique gold balance scale centered on a marble pedestal, dramatic god-ray lighting from high windows, deep navy and warm gold palette, ultra premium, cinematic wide composition, no people, no text"
     },
     {
       "id": "hub-khi-nao",
-      "category": "hub",
-      "generate": true,
-      "alt": "Người Việt suy tư bên bàn làm việc với tài liệu, tâm trạng cân nhắc",
-      "prompt": "Thoughtful Vietnamese person at a desk looking at documents with a contemplative expression, soft question mark light element in background, teal and cream color palette, reassuring mood, modern clean photography, natural lighting"
+      "name": "Pillar hero — when to see a lawyer",
+      "category": "hero",
+      "aspect": "16:9",
+      "width": 1600,
+      "alt": "Cán cân vàng trên nền đá hoa cương navy dưới tia sáng",
+      "style": "Oxford navy + antique gold, symbolic, dramatic single light beam, premium, no people, no text",
+      "prompt": "An antique gold balance scale on dark navy marble, a single dramatic beam of light, symbolizing the decisive moment to seek counsel, minimal, premium, no people, no text"
     },
     {
       "id": "hub-hinh-thuc",
-      "category": "hub",
-      "generate": true,
-      "alt": "Ba hình thức tư vấn: trực tiếp, điện thoại và video call",
-      "prompt": "Split composition showing three consultation methods: in-person meeting, phone call, and laptop video call, all featuring Vietnamese professionals, soft teal palette, clean modern style, informational infographic feeling"
+      "name": "Pillar hero — consultation formats",
+      "category": "hero",
+      "aspect": "16:9",
+      "width": 1600,
+      "alt": "Ba lối kiến trúc navy với ánh sáng vàng tượng trưng các hình thức tư vấn",
+      "style": "Oxford navy + antique gold, abstract architectural, premium, no people, no text",
+      "prompt": "Three elegant navy stone archways each lit with a thread of warm gold light, abstract architectural metaphor for different consultation channels, deep navy and gold, premium, no people, no text"
     },
     {
       "id": "hub-chuan-bi",
-      "category": "hub",
-      "generate": true,
-      "alt": "Hồ sơ pháp lý được sắp xếp gọn gàng kèm checklist trên bàn làm việc",
-      "prompt": "Neatly organized stack of legal documents and folders on a clean modern desk with a checklist and pen, soft teal and white palette, organized and calming feeling, overhead angle, professional photography"
+      "name": "Pillar hero — prepare your file",
+      "category": "hero",
+      "aspect": "16:9",
+      "width": 1600,
+      "alt": "Hồ sơ pháp lý sắp xếp gọn gàng và bút vàng trên bàn navy",
+      "style": "Oxford navy + antique gold, overhead, dramatic light, premium, no people, no text",
+      "prompt": "Neatly organized legal documents, folders and a gold fountain pen on a dark navy desk, overhead flat-lay, dramatic warm light, premium, no people, no text"
     },
     {
       "id": "hub-faq",
-      "category": "hub",
-      "generate": true,
-      "alt": "Luật sư thân thiện đang giải đáp thắc mắc",
-      "prompt": "Friendly Vietnamese lawyer gesturing openly as if answering a question, speech bubble graphic elements, soft teal and sky blue palette, approachable and demystifying mood, modern clean background"
+      "name": "Pillar hero — common questions",
+      "category": "hero",
+      "aspect": "16:9",
+      "width": 1600,
+      "alt": "Cuốn sách luật mở với mép trang mạ vàng trên đá navy",
+      "style": "Oxford navy + antique gold, soft gold light, premium, no people, no text",
+      "prompt": "An open law book with gold-edged pages resting on navy marble, soft warm gold light, symbolizing clear answers, premium, no people, no text"
+    },
+    {
+      "id": "hub-linh-vuc",
+      "name": "Pillar hero — by practice area",
+      "category": "hero",
+      "aspect": "16:9",
+      "width": 1600,
+      "alt": "Hàng cột đá navy với đầu cột mạ vàng cổ điển",
+      "style": "Oxford navy + antique gold, classical architecture, premium, no people, no text",
+      "prompt": "A row of classical navy stone columns with gilded gold capitals receding into soft light, grand architectural perspective, deep navy and gold, premium, no people, no text"
+    },
+    {
+      "id": "field-ly-hon",
+      "name": "Field — family / divorce",
+      "category": "field",
+      "aspect": "3:2",
+      "width": 1200,
+      "alt": "Hai chiếc nhẫn cưới vàng trên góc văn bản pháp lý",
+      "style": "Warm gold, marble, document, premium, no people, no text",
+      "prompt": "Two gold wedding rings resting on the corner of a legal document on white marble, warm gold lighting, premium, no people, no text"
+    },
+    {
+      "id": "field-doanh-nghiep",
+      "name": "Field — corporate",
+      "category": "field",
+      "aspect": "3:2",
+      "width": 1200,
+      "alt": "Phòng họp doanh nghiệp cao cấp, bàn kính, ghế da",
+      "style": "Navy and gold tones, premium, no people, no text",
+      "prompt": "Modern premium corporate boardroom in a high-rise, polished glass table and leather chairs, navy and warm gold tones, no people, no text"
+    },
+    {
+      "id": "field-lao-dong",
+      "name": "Field — labor",
+      "category": "field",
+      "aspect": "3:2",
+      "width": 1200,
+      "alt": "Cái bắt tay tạo bởi nét vàng mảnh trên nền navy",
+      "style": "Abstract minimalist, thin gold lines on dark navy, no people, no text",
+      "prompt": "Abstract minimalist handshake formed by two silhouetted hands of thin gold lines on dark navy, symbolizing labor agreement, no faces, no text"
+    },
+    {
+      "id": "field-hinh-su",
+      "name": "Field — criminal",
+      "category": "field",
+      "aspect": "3:2",
+      "width": 1200,
+      "alt": "Góc thấp những cột pháp đình cổ điển uy nghi",
+      "style": "Dramatic, classical architecture, navy, no people, no text",
+      "prompt": "Dramatic low-angle view of grand courthouse columns, classical Corinthian architecture against a deep navy sky, imposing, no people, no text"
+    },
+    {
+      "id": "field-dat-dai",
+      "name": "Field — land / real estate",
+      "category": "field",
+      "aspect": "3:2",
+      "width": 1200,
+      "alt": "Bản vẽ quy hoạch thửa đất với ranh giới mạ vàng và biểu tượng ngôi nhà",
+      "style": "Oxford navy + antique gold, overhead blueprint, premium, no people, no text",
+      "prompt": "An architectural blueprint of land plots on dark navy paper with a glowing gold property boundary line and a small gold house icon, overhead, premium, no people, no text"
+    },
+    {
+      "id": "section-advice-gap",
+      "name": "Advice-gap section",
+      "category": "content",
+      "aspect": "4:3",
+      "width": 1280,
+      "alt": "Màn hình phát sáng đối lập với cán cân vàng trên đá navy",
+      "style": "Oxford navy + antique gold, symbolic split, cinematic, no people, no text",
+      "prompt": "Symbolic split composition: on one side a cold glowing rectangular screen of light, on the other an antique gold balance scale on navy marble, contrasting generic online info with a real lawyer, deep navy and gold, cinematic, no people, no text"
+    },
+    {
+      "id": "section-why-lawyer",
+      "name": "Why a lawyer — accountability",
+      "category": "content",
+      "aspect": "4:3",
+      "width": 1280,
+      "alt": "Cán cân vàng cân bằng hoàn hảo với một văn bản trên đĩa cân",
+      "style": "Oxford navy + antique gold, symbolic, premium, no people, no text",
+      "prompt": "A perfectly balanced antique gold scale on navy marble with a single legal document on one pan, symbolizing professional accountability and weighed judgement, premium, no people, no text"
+    },
+    {
+      "id": "authority-band-bg",
+      "name": "Authority band background",
+      "category": "background",
+      "aspect": "16:9",
+      "width": 1920,
+      "alt": "Thư viện luật cao cấp với kệ gỗ và ghế da",
+      "style": "Premium law library, warm light, navy and gold, no people, no text",
+      "prompt": "Premium law office private library, mahogany bookshelves of legal volumes, leather chairs, warm golden lighting, deep navy shadows, no people, no text"
+    },
+    {
+      "id": "cta-band-bg",
+      "name": "CTA band background (marble)",
+      "category": "background",
+      "aspect": "16:9",
+      "width": 1920,
+      "alt": "Kết cấu đá hoa cương navy với vân vàng",
+      "style": "Seamless dark navy marble with gold veining, no people, no text",
+      "prompt": "Seamless dark oxford-navy marble texture with subtle warm gold veining, near-black base, luxurious, no people, no text"
+    },
+    {
+      "id": "process-band-bg",
+      "name": "Process band background (hallway)",
+      "category": "background",
+      "aspect": "21:9",
+      "width": 1920,
+      "alt": "Hành lang văn phòng luật navy với ánh sáng vàng",
+      "style": "Navy law-office hallway perspective, warm gold light, no people, no text",
+      "prompt": "Long perspective down a premium navy law-office hallway, dark wood and stone, warm recessed gold lighting, no people, no text"
+    },
+    {
+      "id": "accent-gold-stroke",
+      "name": "Gold brushstroke accent",
+      "category": "decor",
+      "aspect": "16:9",
+      "width": 1600,
+      "alt": "Nét cọ thư pháp mạ vàng trên nền navy",
+      "style": "Minimal, antique gold on deep navy, no people, no text",
+      "prompt": "A single elegant antique-gold calligraphic brushstroke on a deep oxford-navy background, minimal, premium, no people, no text"
+    },
+    {
+      "id": "section-document-signing",
+      "name": "Document signing scene",
+      "category": "content",
+      "aspect": "16:9",
+      "width": 1600,
+      "alt": "Cảnh ký văn bản pháp lý bằng bút vàng trên bàn navy",
+      "style": "Cinematic overhead, navy desk, gold pen, no face, no text",
+      "prompt": "Cinematic overhead of a hand signing a legal document with a gold pen on a dark navy leather desk, dramatic warm light, no visible face, no text"
+    },
+    {
+      "id": "authority-seal",
+      "name": "Gold legal seal emblem",
+      "category": "decor",
+      "aspect": "1:1",
+      "width": 1024,
+      "alt": "Con dấu pháp lý mạ vàng dập nổi trên da navy",
+      "style": "Embossed gold seal on navy leather, circular, no text",
+      "prompt": "An embossed gold legal seal emblem with a laurel and balance-scale motif on deep navy leather, circular, premium, no readable text"
+    },
+    {
+      "id": "guide-khi-nao",
+      "name": "Guide hero — timing",
+      "category": "content",
+      "aspect": "16:7",
+      "width": 1400,
+      "alt": "Đồng hồ cát với cát vàng bên cạnh cán cân trên đá navy",
+      "style": "Oxford navy + antique gold, symbolic, premium, no people, no text",
+      "prompt": "An hourglass with glowing gold sand beside an antique balance scale on navy marble, symbolizing the right time to act, premium, no people, no text"
+    },
+    {
+      "id": "guide-hinh-thuc",
+      "name": "Guide hero — formats",
+      "category": "content",
+      "aspect": "16:7",
+      "width": 1400,
+      "alt": "Bàn navy với điện thoại, laptop và văn bản, điểm nhấn vàng",
+      "style": "Oxford navy + antique gold, overhead, premium, no people, no text",
+      "prompt": "An elegant dark navy desk with a phone, a laptop and a fanned legal document, warm gold accents, overhead, symbolizing consultation formats, no people, no text"
+    },
+    {
+      "id": "guide-chuan-bi",
+      "name": "Guide hero — preparation",
+      "category": "content",
+      "aspect": "16:7",
+      "width": 1400,
+      "alt": "Bảng kẹp danh sách với dấu tích vàng và hồ sơ ngăn nắp",
+      "style": "Oxford navy + antique gold, overhead, premium, no people, no text",
+      "prompt": "A clipboard checklist with gold checkmarks and neatly organized folders on a navy desk, overhead flat-lay, premium, no people, no text"
+    },
+    {
+      "id": "guide-faq",
+      "name": "Guide hero — questions",
+      "category": "content",
+      "aspect": "16:7",
+      "width": 1400,
+      "alt": "Chồng sách luật với dấu hỏi mạ vàng trên gáy sách",
+      "style": "Oxford navy + antique gold, premium, no people, no text",
+      "prompt": "A stack of leather law books with a subtle gold question-mark embossed on the spine, deep navy background, premium, no people, no text"
     },
     {
       "id": "guide-process-generic",
+      "name": "Generic process visual",
       "category": "content",
-      "generate": true,
-      "alt": "Quy trình tư vấn 4 bước minh họa phẳng",
-      "prompt": "Clean infographic-style illustration showing 4 connected steps with icons: question mark, document, handshake, checkmark, teal and blue gradient, modern flat design, white background, professional"
+      "aspect": "16:9",
+      "width": 1400,
+      "alt": "Bốn bậc thang vàng vươn lên trên nền kiến trúc navy",
+      "style": "Oxford navy + antique gold, minimal, no people, no text",
+      "prompt": "Four ascending gold steps over a deep navy architectural background, a clean process metaphor, minimal, no people, no text"
     },
     {
       "id": "guide-checklist-visual",
+      "name": "Generic checklist visual",
       "category": "content",
-      "generate": true,
-      "alt": "Checklist trên bảng kẹp với các dấu tích và biểu tượng tài liệu",
-      "prompt": "Illustration of a checklist on a clipboard with checkmarks, surrounded by floating document icons, teal and green accents, clean flat design, organized and reassuring feeling, white background"
+      "aspect": "4:3",
+      "width": 1200,
+      "alt": "Danh sách kiểm tra điểm nhấn vàng trên giấy navy cao cấp",
+      "style": "Oxford navy + antique gold, overhead, no people, no text",
+      "prompt": "A gold-accented checklist on premium navy paper with neat ticked items, overhead, minimal, no people, no text"
     },
     {
-      "id": "landing-ly-hon",
-      "category": "content",
-      "reuse": "practice-family",
-      "reuseUrl": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/content/practice-family-c50dd275.webp",
-      "alt": "Hai chiếc nhẫn cưới vàng trên góc một văn bản pháp lý",
-      "note": "Reuse shared family-law asset for ly-hon landing + checklist + khi-nao guides."
+      "id": "field-doanh-nghiep-arbitration",
+      "name": "Field accent — commercial gavel",
+      "category": "field",
+      "aspect": "3:2",
+      "width": 1200,
+      "alt": "Búa gỗ sẫm và điểm nhấn vàng cho trọng tài thương mại",
+      "style": "Dark polished wood, gold accent, navy, no people, no text",
+      "prompt": "A polished dark wood gavel resting on a sound block with a warm gold accent, representing commercial arbitration, deep navy background, no people, no text"
     },
     {
-      "id": "landing-dat-dai",
-      "category": "content",
-      "generate": true,
-      "alt": "Minh họa ngôi nhà với kính lúp xem xét nền móng, biểu tượng tài liệu",
-      "prompt": "Illustration of a house with a magnifying glass examining the foundation, document elements floating around, teal and earth tones, thorough and methodical feeling, modern flat design"
+      "id": "section-trust-texture",
+      "name": "Trust strip texture",
+      "category": "background",
+      "aspect": "21:9",
+      "width": 1920,
+      "alt": "Kết cấu đá navy với hoa văn pháp lý vàng rất nhẹ",
+      "style": "Very subtle navy marble + faint gold motif, background, no people, no text",
+      "prompt": "Very subtle dark navy marble texture with faint embossed gold legal motifs, understated background, no people, no text"
     },
     {
-      "id": "section-bg-teal",
+      "id": "symbol-scales",
+      "name": "Gold scale cutout",
       "category": "decor",
-      "reuse": "gradient-mesh-teal",
-      "reuseUrl": "https://pub-ebe397ad6fc946888f5c9aacc3cc48bb.r2.dev/vothienhien.com/decor/gradient-mesh-teal-5c1b8e44.webp",
-      "alt": "Nền gradient teal nhẹ",
-      "note": "Reuse shared teal gradient mesh for CTA/section backgrounds."
+      "aspect": "1:1",
+      "width": 1024,
+      "alt": "Cán cân công lý mạ vàng (cắt nền)",
+      "style": "Antique gold balance scale, clean studio, for transparent cutout",
+      "transparent": true,
+      "prompt": "A single antique gold balance scale of justice, front view, centered, clean even studio lighting, isolated subject"
+    },
+    {
+      "id": "field-ly-hon-detail",
+      "name": "Field accent — family document",
+      "category": "field",
+      "aspect": "3:2",
+      "width": 1200,
+      "alt": "Văn bản hôn nhân gia đình với bút vàng trên đá sáng",
+      "style": "Warm gold, marble, document, premium, no people, no text",
+      "prompt": "A family-law document with a gold pen and a small olive branch on light marble, warm gentle lighting, premium, no people, no text"
+    },
+    {
+      "id": "field-dat-dai-detail",
+      "name": "Field accent — land title",
+      "category": "field",
+      "aspect": "3:2",
+      "width": 1200,
+      "alt": "Giấy chứng nhận quyền sử dụng đất với dấu mạ vàng",
+      "style": "Oxford navy + antique gold, document detail, premium, no people, no text",
+      "prompt": "A land-use certificate document with a gold embossed seal and a small architectural model house on a navy desk, premium, no readable text"
+    },
+    {
+      "id": "section-consultation",
+      "name": "Consultation scene (symbolic)",
+      "category": "content",
+      "aspect": "16:9",
+      "width": 1600,
+      "alt": "Hai ghế da đối diện qua bàn navy với cán cân vàng",
+      "style": "Oxford navy + antique gold, symbolic, premium, no people, no text",
+      "prompt": "Two empty leather chairs facing each other across a navy table with an antique gold scale between them, symbolizing a calm lawyer consultation, warm light, no people, no text"
+    },
+    {
+      "id": "hero-columns-accent",
+      "name": "Hero columns accent",
+      "category": "decor",
+      "aspect": "9:16",
+      "width": 1024,
+      "alt": "Cột đá navy với đầu cột vàng, dải dọc trang trí",
+      "style": "Oxford navy + antique gold, vertical architectural accent, no people, no text",
+      "prompt": "A tall classical navy stone column with a gilded gold capital against deep navy, vertical decorative accent strip, premium, no people, no text"
     }
   ]
 }

@@ -37,7 +37,7 @@ export function Toc({
   return (
     <nav aria-label="Mục lục" className="text-sm">
       <p className="mb-3 flex items-center gap-2 font-heading text-xs font-semibold uppercase tracking-wide text-muted">
-        <List className="size-4 text-teal" />
+        <List className="size-4 text-navy" />
         Nội dung bài viết
       </p>
       <ul className="space-y-1 border-l border-line">
@@ -47,8 +47,8 @@ export function Toc({
               href={`#${h.id}`}
               className={`-ml-px block border-l-2 py-1.5 pl-3 leading-snug transition-colors ${
                 active === h.id
-                  ? 'border-teal font-medium text-teal-700'
-                  : 'border-transparent text-muted hover:border-teal/40 hover:text-ink'
+                  ? 'border-navy font-medium text-navy-700'
+                  : 'border-transparent text-muted hover:border-navy/40 hover:text-ink'
               }`}
             >
               {h.text}

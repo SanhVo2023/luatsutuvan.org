@@ -76,14 +76,14 @@ export function Checklist({
         <h3 className="font-heading text-lg font-semibold text-ink">
           Danh sách giấy tờ cần chuẩn bị
         </h3>
-        <span className="shrink-0 rounded-full bg-teal-50 px-3 py-1 text-sm font-semibold text-teal-700">
+        <span className="shrink-0 rounded-full bg-navy-50 px-3 py-1 text-sm font-semibold text-navy-700">
           {completed}/{items.length}
         </span>
       </div>
 
       <div className="mb-6 h-2 w-full overflow-hidden rounded-full bg-surface-alt">
         <div
-          className="h-full rounded-full bg-gradient-to-r from-teal to-sky transition-[width] duration-500"
+          className="h-full rounded-full bg-gradient-to-r from-navy to-navy-400 transition-[width] duration-500"
           style={{ width: `${pct}%` }}
         />
       </div>
@@ -101,21 +101,21 @@ export function Checklist({
                 className={`flex w-full items-start gap-3.5 rounded-2xl border p-4 text-left transition-all ${
                   isDone
                     ? 'border-success/40 bg-[#f1faf2]'
-                    : 'border-line bg-bg hover:border-teal/30 hover:bg-teal-50/40'
+                    : 'border-line bg-bg hover:border-navy/30 hover:bg-navy-50/40'
                 }`}
               >
                 <span
                   className={`mt-0.5 grid size-7 shrink-0 place-items-center rounded-lg border-2 transition-colors ${
                     isDone
                       ? 'border-success bg-success'
-                      : 'border-teal/40 bg-white'
+                      : 'border-navy/40 bg-white'
                   }`}
                 >
                   <svg viewBox="0 0 24 24" className="size-4" fill="none">
                     <path
                       className="chk-path"
                       d="M5 12.5l4 4L19 7"
-                      stroke={isDone ? '#fff' : '#0a8f85'}
+                      stroke={isDone ? '#fff' : '#0b2a4a'}
                       strokeWidth="2.6"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -148,7 +148,7 @@ export function Checklist({
       </ul>
 
       {pct === 100 && (
-        <p className="mt-5 rounded-2xl bg-teal-50 px-4 py-3 text-center text-sm font-medium text-teal-700">
+        <p className="mt-5 rounded-2xl bg-navy-50 px-4 py-3 text-center text-sm font-medium text-navy-700">
           Bạn đã chuẩn bị xong hồ sơ. Đây là thời điểm tốt để đặt lịch tư vấn.
         </p>
       )}

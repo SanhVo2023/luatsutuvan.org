@@ -8,7 +8,7 @@ export const size = {
 }
 export const contentType = 'image/png'
 
-// 1200x630 branded social card on a teal gradient.
+// 1200x630 branded social card on an oxford-navy gradient with gold accents.
 // Uses the next/og built-in default font (no remote/bundled font fetch),
 // so the build has no external dependency and renders cleanly.
 export default function OpengraphImage() {
@@ -22,7 +22,7 @@ export default function OpengraphImage() {
           flexDirection: 'column',
           justifyContent: 'space-between',
           padding: '72px 80px',
-          background: 'linear-gradient(135deg, #0FA89C 0%, #0A8F85 55%, #07736B 100%)',
+          background: 'linear-gradient(135deg, #0B2A4A 0%, #0A2540 55%, #08203A 100%)',
           color: '#FFFFFF',
           fontFamily: 'sans-serif',
         }}
@@ -37,8 +37,8 @@ export default function OpengraphImage() {
               width: 96,
               height: 96,
               borderRadius: 24,
-              background: 'rgba(255,255,255,0.14)',
-              border: '2px solid rgba(255,255,255,0.35)',
+              background: 'rgba(194,161,77,0.14)',
+              border: '2px solid rgba(194,161,77,0.45)',
             }}
           >
             <svg
@@ -46,7 +46,7 @@ export default function OpengraphImage() {
               height="60"
               viewBox="0 0 64 64"
               fill="none"
-              stroke="#FFFFFF"
+              stroke="#C2A14D"
               strokeWidth={3}
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -60,7 +60,7 @@ export default function OpengraphImage() {
               <path d="M46 22 L51 33" />
               <path d="M12 33 Q18 41 24 33" />
               <path d="M40 33 Q46 41 52 33" />
-              <circle cx="32" cy="16" r="3" fill="#FFFFFF" />
+              <circle cx="32" cy="16" r="3" fill="#C2A14D" />
             </svg>
           </div>
           <div
@@ -111,7 +111,7 @@ export default function OpengraphImage() {
             color: 'rgba(255,255,255,0.85)',
           }}
         >
-          <div style={{ display: 'flex', width: 64, height: 6, borderRadius: 3, background: '#FFFFFF' }} />
+          <div style={{ display: 'flex', width: 64, height: 6, borderRadius: 3, background: '#C2A14D' }} />
           Tư vấn pháp luật rõ ràng, dễ hiểu
         </div>
       </div>

@@ -27,8 +27,8 @@ export function Accordion({ items }: { items: AccordionEntry[] }) {
             <div
               className={`rounded-2xl border transition-colors ${
                 isOpen
-                  ? 'border-teal/30 bg-teal-50 shadow-soft'
-                  : 'border-line bg-white hover:border-teal/25'
+                  ? 'border-navy/30 bg-navy-50 shadow-soft'
+                  : 'border-line bg-white hover:border-navy/25'
               }`}
             >
               <button
@@ -43,7 +43,7 @@ export function Accordion({ items }: { items: AccordionEntry[] }) {
                 <motion.span
                   animate={{ rotate: isOpen ? 45 : 0 }}
                   transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                  className="grid size-8 shrink-0 place-items-center rounded-full bg-teal text-white"
+                  className="grid size-8 shrink-0 place-items-center rounded-full bg-navy text-white"
                 >
                   <Plus className="size-4" />
                 </motion.span>

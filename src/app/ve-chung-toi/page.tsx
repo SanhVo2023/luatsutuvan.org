@@ -63,7 +63,7 @@ export default function AboutPage() {
                 href={APOLO.vi.parentBrandUrl}
                 target="_blank"
                 rel="noopener"
-                className="font-medium text-teal-700 underline decoration-teal/30 underline-offset-2"
+                className="font-medium text-navy-700 underline decoration-navy/30 underline-offset-2"
               >
                 Apolo Lawyers
               </a>
@@ -80,7 +80,7 @@ export default function AboutPage() {
           {CREDS.map((c) => (
             <StaggerItem key={c.label}>
               <div className="rounded-3xl border border-line bg-white p-6 text-center shadow-soft">
-                <span className="mx-auto grid size-12 place-items-center rounded-2xl bg-teal-50 text-teal-700">
+                <span className="mx-auto grid size-12 place-items-center rounded-2xl bg-navy-50 text-navy-700">
                   <c.icon className="size-6" />
                 </span>
                 <p className="mt-3 font-heading text-lg font-bold text-ink">
@@ -94,10 +94,10 @@ export default function AboutPage() {
 
         <div className="mt-14 grid gap-8 rounded-3xl border border-line bg-white p-8 shadow-soft lg:grid-cols-[auto_1fr] lg:p-10">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            <span className="grid size-24 place-items-center rounded-3xl bg-gradient-to-br from-teal to-teal-700 font-heading text-3xl font-bold text-white">
+            <span className="grid size-24 place-items-center rounded-3xl bg-gradient-to-br from-navy to-navy-700 font-heading text-3xl font-bold text-white">
               VH
             </span>
-            <div className="mt-3 inline-flex items-center gap-1.5 rounded-pill border border-teal/20 bg-teal-50 px-3 py-1 text-xs font-medium text-teal-700">
+            <div className="mt-3 inline-flex items-center gap-1.5 rounded-pill border border-navy/20 bg-navy-50 px-3 py-1 text-xs font-medium text-navy-700">
               <ShieldCheck className="size-3.5" />
               {TRUST.barAssociation}
             </div>
@@ -106,7 +106,7 @@ export default function AboutPage() {
             <h2 className="font-heading text-2xl font-bold text-ink">
               {LAWYER.name}
             </h2>
-            <p className="mt-1 font-medium text-teal-700">{LAWYER.title}</p>
+            <p className="mt-1 font-medium text-navy-700">{LAWYER.title}</p>
             <p className="mt-4 leading-relaxed text-ink-soft">{LAWYER.bio}</p>
             <p className="mt-3 leading-relaxed text-ink-soft">
               Quan điểm xuyên suốt của chúng tôi: một khách hàng được trang bị
@@ -126,7 +126,7 @@ export default function AboutPage() {
           {VALUES.map((v) => (
             <StaggerItem key={v.title}>
               <div className="h-full rounded-3xl border border-line bg-white p-7 shadow-soft">
-                <span className="grid size-12 place-items-center rounded-2xl bg-teal-50 text-teal-700">
+                <span className="grid size-12 place-items-center rounded-2xl bg-navy-50 text-navy-700">
                   <v.icon className="size-6" />
                 </span>
                 <h3 className="mt-4 font-heading text-lg font-semibold text-ink">

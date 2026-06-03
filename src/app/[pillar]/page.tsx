@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
 import { SectionHeading } from '@/components/ui/SectionHeading'
@@ -12,6 +13,7 @@ import { breadcrumbSchema } from '@/lib/schema'
 import { PILLARS, pillarByRoute } from '@/config/pillars'
 import { getGuidesByPillar } from '@/lib/guides'
 import { ctaUrl, SITE } from '@/config/site'
+import { asset, assetAlt } from '@/lib/assets'
 
 export function generateStaticParams() {
   return PILLARS.map((p) => ({ pillar: p.slug }))
@@ -38,6 +40,7 @@ export default async function PillarPage({ params }: Params) {
   if (!pillar) notFound()
 
   const guides = getGuidesByPillar(pillar.id)
+  const heroImg = pillar.heroImageId ? asset(pillar.heroImageId) : undefined
 
   return (
     <>
@@ -53,20 +56,40 @@ export default async function PillarPage({ params }: Params) {
         <div className="bg-guide-grid absolute inset-0 opacity-50" aria-hidden />
         <div className="relative mx-auto max-w-7xl px-5 pb-14 pt-10 lg:px-8 lg:pb-16">
           <Breadcrumbs items={[{ name: pillar.title }]} />
-          <ScrollReveal className="max-w-3xl">
-            <span className="grid size-16 place-items-center rounded-2xl bg-gradient-to-br from-teal to-teal-700 text-white shadow-soft">
-              <Icon name={pillar.icon} className="size-8" />
-            </span>
-            <h1 className="mt-6 font-heading text-4xl font-bold leading-tight tracking-tight text-ink sm:text-5xl">
-              {pillar.title}
-            </h1>
-            <p className="mt-5 text-lg leading-relaxed text-ink-soft">
-              {pillar.intro}
-            </p>
-            <p className="mt-4 inline-flex items-center gap-2 rounded-pill bg-white/70 px-4 py-1.5 text-sm font-medium text-teal-700 backdrop-blur">
-              {guides.length} hướng dẫn trong chủ đề này
-            </p>
-          </ScrollReveal>
+          <div className="mt-2 grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+            <ScrollReveal>
+              <span className="grid size-16 place-items-center rounded-2xl bg-gradient-to-br from-navy to-navy-700 text-white shadow-soft ring-1 ring-gold/30">
+                <Icon name={pillar.icon} className="size-8 text-gold-soft" />
+              </span>
+              <h1 className="mt-6 font-display text-[2.4rem] font-bold leading-[1.08] tracking-[-0.01em] text-ink sm:text-5xl">
+                {pillar.title}
+              </h1>
+              <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-soft">
+                {pillar.intro}
+              </p>
+              <p className="mt-5 inline-flex items-center gap-2 rounded-pill border border-gold/30 bg-white/70 px-4 py-1.5 text-sm font-medium text-navy-700 backdrop-blur">
+                {guides.length} hướng dẫn trong chủ đề này
+              </p>
+            </ScrollReveal>
+
+            {heroImg && (
+              <ScrollReveal delay={0.12}>
+                <div className="relative overflow-hidden rounded-[2rem] shadow-lift ring-1 ring-gold/30">
+                  <div className="relative aspect-[16/11]">
+                    <Image
+                      src={heroImg}
+                      alt={assetAlt(pillar.heroImageId!, pillar.title)}
+                      fill
+                      priority
+                      sizes="(max-width: 1024px) 100vw, 46vw"
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-700/40 to-transparent" />
+                  </div>
+                </div>
+              </ScrollReveal>
+            )}
+          </div>
         </div>
       </section>
 
@@ -97,16 +120,16 @@ export default async function PillarPage({ params }: Params) {
             <Link
               key={p.id}
               href={`/${p.slug}/`}
-              className="inline-flex items-center gap-2 rounded-pill border border-line bg-white px-5 py-2.5 text-sm font-medium text-ink-soft transition-colors hover:border-teal/30 hover:text-teal-700"
+              className="inline-flex items-center gap-2 rounded-pill border border-line bg-white px-5 py-2.5 text-sm font-medium text-ink-soft transition-colors hover:border-navy/30 hover:text-navy-700"
             >
-              <Icon name={p.icon} className="size-4 text-teal" />
+              <Icon name={p.icon} className="size-4 text-navy" />
               {p.shortTitle}
             </Link>
           ))}
         </div>
 
         <ScrollReveal className="mt-16">
-          <div className="flex flex-col items-center justify-between gap-5 rounded-3xl border border-teal/20 bg-teal-50 px-8 py-8 text-center sm:flex-row sm:text-left">
+          <div className="flex flex-col items-center justify-between gap-5 rounded-3xl border border-navy/20 bg-navy-50 px-8 py-8 text-center sm:flex-row sm:text-left">
             <div>
               <h3 className="font-heading text-xl font-semibold text-ink">
                 Cần trao đổi trực tiếp với luật sư?
@@ -119,7 +142,7 @@ export default async function PillarPage({ params }: Params) {
               href={ctaUrl({ placement: `hub-${pillar.id}` })}
               target="_blank"
               rel="noopener"
-              className="group inline-flex shrink-0 items-center gap-2 rounded-pill bg-teal px-6 py-3.5 font-semibold text-white transition-colors hover:bg-teal-600"
+              className="group inline-flex shrink-0 items-center gap-2 rounded-pill bg-navy px-6 py-3.5 font-semibold text-white transition-colors hover:bg-navy-600"
             >
               Đặt lịch tư vấn
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />

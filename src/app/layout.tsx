@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Be_Vietnam_Pro } from 'next/font/google'
+import { Be_Vietnam_Pro, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
@@ -12,6 +12,14 @@ const beVietnam = Be_Vietnam_Pro({
   subsets: ['vietnamese', 'latin'],
   weight: ['400', '500', '600', '700', '800'],
   variable: '--font-be-vietnam',
+  display: 'swap',
+})
+
+// Refined serif display for large headings — "international legal authority".
+const playfair = Playfair_Display({
+  subsets: ['vietnamese', 'latin'],
+  weight: ['500', '600', '700', '800'],
+  variable: '--font-playfair',
   display: 'swap',
 })
 
@@ -41,7 +49,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0a8f85',
+  themeColor: '#0b2a4a',
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover', // env(safe-area-inset-*) resolves on notched iOS/Android
@@ -54,7 +62,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="vi" className={beVietnam.variable}>
+    <html lang="vi" className={`${beVietnam.variable} ${playfair.variable}`}>
       <body>
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <a href="#main" className="skip-link">

@@ -6,10 +6,9 @@ import { PILLARS } from '@/config/pillars'
 import { getGuidesByPillar } from '@/lib/guides'
 
 const ACCENT: Record<string, { ring: string; chip: string; icon: string }> = {
-  teal: { ring: 'hover:border-teal/35', chip: 'bg-teal-50 text-teal-700', icon: 'from-teal to-teal-700' },
-  sky: { ring: 'hover:border-sky/40', chip: 'bg-sky-50 text-sky', icon: 'from-sky to-[#3a86bd]' },
-  gold: { ring: 'hover:border-gold/40', chip: 'bg-gold-soft text-gold', icon: 'from-gold to-[#a87d20]' },
-  success: { ring: 'hover:border-success/40', chip: 'bg-[#eef9f0] text-success', icon: 'from-success to-[#2a8943]' },
+  navy: { ring: 'hover:border-navy/35', chip: 'bg-navy-50 text-navy-700', icon: 'from-navy to-navy-700' },
+  gold: { ring: 'hover:border-gold/45', chip: 'bg-gold-soft text-gold-600', icon: 'from-gold to-gold-600' },
+  steel: { ring: 'hover:border-navy-400/45', chip: 'bg-navy-50 text-navy-400', icon: 'from-navy-400 to-navy' },
 }
 
 export function PillarGrid() {
@@ -40,7 +39,7 @@ export function PillarGrid() {
                   <span className={`rounded-pill px-3 py-1 text-xs font-semibold ${a.chip}`}>
                     {count} hướng dẫn
                   </span>
-                  <span className="inline-flex items-center gap-1 text-sm font-medium text-teal-700">
+                  <span className="inline-flex items-center gap-1 text-sm font-medium text-navy-700">
                     Khám phá
                     <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                   </span>

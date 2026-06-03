@@ -10,7 +10,7 @@ export function Breadcrumbs({
     <nav aria-label="Breadcrumb" className="mb-6">
       <ol className="flex flex-wrap items-center gap-1.5 text-sm text-muted">
         <li>
-          <Link href="/" className="flex items-center gap-1 hover:text-teal-700">
+          <Link href="/" className="flex items-center gap-1 hover:text-navy-700">
             <Home className="size-3.5" />
             <span className="sr-only">Trang chủ</span>
           </Link>
@@ -19,7 +19,7 @@ export function Breadcrumbs({
           <li key={i} className="flex items-center gap-1.5">
             <ChevronRight className="size-3.5 text-line" />
             {it.href && i < items.length - 1 ? (
-              <Link href={it.href} className="hover:text-teal-700">
+              <Link href={it.href} className="hover:text-navy-700">
                 {it.name}
               </Link>
             ) : (

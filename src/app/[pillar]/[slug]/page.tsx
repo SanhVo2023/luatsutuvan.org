@@ -27,6 +27,7 @@ import {
 } from '@/lib/guides'
 import { SITE } from '@/config/site'
 import { getBylineName, getSiteDisclaimer, LOCAL_GUIDE_DISCLAIMER } from '@/lib/boilerplate'
+import { FieldLanding } from '@/components/landing/FieldLanding'
 
 export function generateStaticParams() {
   return getAllGuides().map((g) => ({
@@ -94,6 +95,22 @@ export default async function GuidePage({ params }: Params) {
   }
   if (guide.faq?.length) schemas.push(faqSchema(guide.faq))
 
+  // Practice-area pages render as designed field-landing pages.
+  if (pillar.id === 'landing-linh-vuc') {
+    return (
+      <>
+        <JsonLd data={schemas} />
+        <FieldLanding
+          guide={guide}
+          pillar={pillar}
+          byline={byline}
+          disclaimer={disclaimer}
+          related={related}
+        />
+      </>
+    )
+  }
+
   return (
     <>
       <JsonLd data={schemas} />
@@ -108,7 +125,7 @@ export default async function GuidePage({ params }: Params) {
               { name: guide.title },
             ]}
           />
-          <span className="inline-flex items-center gap-2 rounded-pill bg-teal-50 px-3.5 py-1.5 text-sm font-medium text-teal-700">
+          <span className="inline-flex items-center gap-2 rounded-pill bg-navy-50 px-3.5 py-1.5 text-sm font-medium text-navy-700">
             <FileText className="size-4" />
             {pillar.title}
           </span>
@@ -120,17 +137,17 @@ export default async function GuidePage({ params }: Params) {
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted">
             <span className="inline-flex items-center gap-1.5">
-              <Clock className="size-4 text-teal" />
+              <Clock className="size-4 text-navy" />
               {guide.readingTime} phút đọc
             </span>
             {guide.updated && (
               <span className="inline-flex items-center gap-1.5">
-                <CalendarDays className="size-4 text-teal" />
+                <CalendarDays className="size-4 text-navy" />
                 Cập nhật {guide.updated}
               </span>
             )}
             <span className="inline-flex items-center gap-1.5">
-              <ListChecks className="size-4 text-teal" />
+              <ListChecks className="size-4 text-navy" />
               {guide.wordCount.toLocaleString('vi-VN')} từ
             </span>
             <span className="text-muted">Bởi {byline}</span>

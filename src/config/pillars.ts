@@ -18,7 +18,8 @@ export interface Pillar {
   description: string
   intro: string
   icon: string // lucide icon name
-  accent: 'teal' | 'sky' | 'gold' | 'success'
+  accent: 'navy' | 'gold' | 'steel'
+  heroImageId?: string // generated hero image id (src/lib/assets.ts), optional
 }
 
 export const PILLARS: Pillar[] = [
@@ -32,7 +33,8 @@ export const PILLARS: Pillar[] = [
     intro:
       'Phần lớn rắc rối pháp lý trở nên tốn kém vì người trong cuộc gặp luật sư quá muộn. Những hướng dẫn dưới đây giúp bạn nhận ra thời điểm nên tìm đến luật sư — bình tĩnh, có căn cứ, đúng lúc.',
     icon: 'Compass',
-    accent: 'teal',
+    accent: 'navy',
+    heroImageId: 'hub-khi-nao',
   },
   {
     id: 'hinh-thuc',
@@ -44,7 +46,8 @@ export const PILLARS: Pillar[] = [
     intro:
       'Bạn không nhất thiết phải đến văn phòng mới được tư vấn. Tìm hiểu từng hình thức tư vấn pháp luật, chi phí, ưu nhược điểm để chọn cách phù hợp nhất với hoàn cảnh của mình.',
     icon: 'MessagesSquare',
-    accent: 'sky',
+    accent: 'gold',
+    heroImageId: 'hub-hinh-thuc',
   },
   {
     id: 'chuan-bi',
@@ -56,7 +59,8 @@ export const PILLARS: Pillar[] = [
     intro:
       'Một buổi tư vấn hiệu quả bắt đầu từ sự chuẩn bị. Các checklist dưới đây liệt kê chính xác những giấy tờ cần mang theo cho từng loại vụ việc, kèm hướng dẫn tổ chức hồ sơ gọn gàng.',
     icon: 'ClipboardCheck',
-    accent: 'success',
+    accent: 'steel',
+    heroImageId: 'hub-chuan-bi',
   },
   {
     id: 'faq',
@@ -68,7 +72,8 @@ export const PILLARS: Pillar[] = [
     intro:
       'Những băn khoăn khiến nhiều người ngần ngại liên hệ luật sư thường xuất phát từ hiểu lầm. Phần này trả lời trực tiếp, trung thực và có dẫn chiếu quy định pháp luật.',
     icon: 'HelpCircle',
-    accent: 'sky',
+    accent: 'navy',
+    heroImageId: 'hub-faq',
   },
   {
     id: 'landing-linh-vuc',
@@ -81,6 +86,7 @@ export const PILLARS: Pillar[] = [
       'Mỗi lĩnh vực pháp luật có đặc thù riêng. Các trang dưới đây mô tả những gì bạn nên biết và nên chuẩn bị trước khi tư vấn theo từng lĩnh vực cụ thể.',
     icon: 'Scale',
     accent: 'gold',
+    heroImageId: 'hub-linh-vuc',
   },
 ]
 

@@ -16,10 +16,10 @@ export function CtaBlock({
   subtext?: string
 }) {
   return (
-    <aside className="not-prose my-10 overflow-hidden rounded-3xl border border-teal/20 bg-gradient-to-br from-teal-50 to-sky-50 shadow-soft">
-      <div className="border-l-4 border-teal p-7 sm:p-8">
+    <aside className="not-prose my-10 overflow-hidden rounded-3xl border border-navy/20 bg-gradient-to-br from-navy-50 to-navy-50 shadow-soft">
+      <div className="border-l-4 border-navy p-7 sm:p-8">
         <div className="flex items-start gap-4">
-          <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-teal text-white shadow-glow">
+          <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-navy text-white shadow-glow">
             <CheckCircle2 className="size-6" />
           </span>
           <div className="min-w-0">
@@ -31,10 +31,10 @@ export function CtaBlock({
             </p>
 
             <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
-              <span className="inline-flex items-center gap-1.5 text-teal-700">
+              <span className="inline-flex items-center gap-1.5 text-navy-700">
                 <Clock className="size-4" /> Phản hồi trong 30 phút
               </span>
-              <span className="inline-flex items-center gap-1.5 text-teal-700">
+              <span className="inline-flex items-center gap-1.5 text-navy-700">
                 <Gift className="size-4" /> Tư vấn miễn phí lần đầu
               </span>
             </div>
@@ -46,7 +46,7 @@ export function CtaBlock({
               })}
               target="_blank"
               rel="noopener"
-              className="group mt-6 inline-flex items-center gap-2 rounded-pill bg-teal px-6 py-3.5 font-semibold text-white shadow-glow transition-all hover:bg-teal-600 hover:shadow-lift"
+              className="group mt-6 inline-flex items-center gap-2 rounded-pill bg-navy px-6 py-3.5 font-semibold text-white shadow-glow transition-all hover:bg-navy-600 hover:shadow-lift"
             >
               Đặt lịch tư vấn ngay
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
@@ -61,14 +61,14 @@ export function CtaBlock({
 /** Subtle inline CTA used mid-content. */
 export function InlineCta({ guideSlug }: { guideSlug?: string }) {
   return (
-    <div className="not-prose my-7 rounded-2xl border-l-4 border-teal bg-teal-50 px-5 py-4">
+    <div className="not-prose my-7 rounded-2xl border-l-4 border-navy bg-navy-50 px-5 py-4">
       <p className="text-ink-soft">
         Đã hiểu quy trình?{' '}
         <a
           href={ctaUrl({ content: guideSlug, placement: 'inline' })}
           target="_blank"
           rel="noopener"
-          className="font-semibold text-teal-700 underline decoration-teal/40 underline-offset-2 hover:decoration-teal"
+          className="font-semibold text-navy-700 underline decoration-navy/40 underline-offset-2 hover:decoration-navy"
         >
           Đặt lịch tư vấn với luật sư
         </a>{' '}

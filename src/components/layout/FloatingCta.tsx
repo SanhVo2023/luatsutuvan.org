@@ -36,7 +36,7 @@ export function FloatingCta() {
           exit={{ opacity: 0, y: 16 }}
           transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
           style={{ bottom: 'calc(1.25rem + env(safe-area-inset-bottom))' }}
-          className="fixed right-5 z-40 inline-flex items-center gap-2 rounded-pill bg-teal px-5 py-3.5 font-semibold text-white shadow-lift transition-colors hover:bg-teal-600"
+          className="fixed right-5 z-40 inline-flex items-center gap-2 rounded-pill bg-navy px-5 py-3.5 font-semibold text-white shadow-lift transition-colors hover:bg-navy-600"
         >
           <CalendarCheck className="size-5" />
           <span className="hidden sm:inline">Đặt lịch tư vấn</span>

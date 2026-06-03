@@ -13,7 +13,7 @@ export function TrustSidebar({ guideSlug }: { guideSlug?: string }) {
       {/* Lawyer mini-profile */}
       <div className="rounded-3xl border border-line bg-white p-5 shadow-soft">
         <div className="flex items-center gap-3.5">
-          <span className="grid size-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-teal to-teal-700 font-heading text-xl font-bold text-white">
+          <span className="grid size-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-navy to-navy-700 font-heading text-xl font-bold text-white">
             VH
           </span>
           <div className="min-w-0">
@@ -26,30 +26,30 @@ export function TrustSidebar({ guideSlug }: { guideSlug?: string }) {
 
         <ul className="mt-5 space-y-2.5 text-sm">
           <li className="flex items-center gap-2.5 text-ink-soft">
-            <ShieldCheck className="size-4 shrink-0 text-teal" />
+            <ShieldCheck className="size-4 shrink-0 text-navy" />
             Thành viên {TRUST.barAssociation}
           </li>
           <li className="flex items-center gap-2.5 text-ink-soft">
-            <Gift className="size-4 shrink-0 text-teal" />
+            <Gift className="size-4 shrink-0 text-navy" />
             {TRUST.freeConsult}
           </li>
           <li className="flex items-center gap-2.5 text-ink-soft">
-            <Lock className="size-4 shrink-0 text-teal" />
+            <Lock className="size-4 shrink-0 text-navy" />
             {TRUST.confidentiality}
           </li>
         </ul>
       </div>
 
       {/* Mini CTA */}
-      <div className="rounded-3xl border border-teal/20 bg-gradient-to-br from-teal-50 to-sky-50 p-5">
+      <div className="rounded-3xl border border-navy/20 bg-gradient-to-br from-navy-50 to-navy-50 p-5">
         <p className="font-heading font-semibold text-ink">
           Sẵn sàng trao đổi với luật sư?
         </p>
         <div className="mt-3 space-y-2 text-sm">
-          <span className="flex items-center gap-2 text-teal-700">
+          <span className="flex items-center gap-2 text-navy-700">
             <Clock className="size-4" /> Phản hồi trong {TRUST.responseTime}
           </span>
-          <span className="flex items-center gap-2 text-teal-700">
+          <span className="flex items-center gap-2 text-navy-700">
             <Gift className="size-4" /> Tư vấn miễn phí lần đầu
           </span>
         </div>
@@ -57,14 +57,14 @@ export function TrustSidebar({ guideSlug }: { guideSlug?: string }) {
           href={ctaUrl({ content: guideSlug, placement: 'sidebar' })}
           target="_blank"
           rel="noopener"
-          className="mt-4 flex items-center justify-center gap-1.5 rounded-pill bg-teal px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-teal-600"
+          className="mt-4 flex items-center justify-center gap-1.5 rounded-pill bg-navy px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy-600"
         >
           Đặt lịch tại luatsutuvan.net
           <ArrowUpRight className="size-4" />
         </a>
         <p className="mt-3 text-center text-xs text-muted">
           Hoặc gọi{' '}
-          <a href={SITE.phoneHref} className="font-medium text-teal-700">
+          <a href={SITE.phoneHref} className="font-medium text-navy-700">
             {SITE.phone}
           </a>
         </p>

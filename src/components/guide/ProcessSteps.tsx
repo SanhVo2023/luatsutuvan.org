@@ -14,16 +14,16 @@ export function ProcessSteps({ steps }: { steps: ProcessStep[] }) {
     <div className="not-prose my-10 relative">
       <div
         aria-hidden
-        className="absolute left-[1.85rem] top-6 bottom-6 w-px bg-gradient-to-b from-teal/40 via-sky/30 to-transparent sm:left-[2.1rem]"
+        className="absolute left-[1.85rem] top-6 bottom-6 w-px bg-gradient-to-b from-navy/40 via-navy-400/30 to-transparent sm:left-[2.1rem]"
       />
       <ol className="space-y-7">
         {steps.map((step, i) => (
           <ScrollReveal as="li" key={i} delay={i * 0.05} className="relative flex gap-5">
             <div
               id={`buoc-${i + 1}`}
-              className="relative z-10 grid size-[3.7rem] shrink-0 scroll-mt-28 place-items-center rounded-2xl border border-teal/20 bg-white shadow-soft sm:size-[4.2rem]"
+              className="relative z-10 grid size-[3.7rem] shrink-0 scroll-mt-28 place-items-center rounded-2xl border border-navy/20 bg-white shadow-soft sm:size-[4.2rem]"
             >
-              <span className="font-heading text-2xl font-extrabold leading-none text-teal sm:text-3xl">
+              <span className="font-heading text-2xl font-extrabold leading-none text-navy sm:text-3xl">
                 {i + 1}
               </span>
             </div>

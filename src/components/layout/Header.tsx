@@ -35,7 +35,7 @@ export function Header() {
     >
       <div className="mx-auto flex h-[4.6rem] max-w-7xl items-center justify-between gap-6 px-5 lg:px-8">
         <Link href="/" className="flex items-center gap-2.5">
-          <span className="grid size-10 place-items-center rounded-xl bg-gradient-to-br from-teal to-teal-700 text-white shadow-soft">
+          <span className="grid size-10 place-items-center rounded-xl bg-gradient-to-br from-navy to-navy-700 text-white shadow-soft">
             <Scale className="size-5" />
           </span>
           <span className="flex flex-col leading-none">
@@ -58,7 +58,7 @@ export function Header() {
                 href={href}
                 className={`rounded-pill px-3.5 py-2 text-[0.92rem] font-medium transition-colors ${
                   active
-                    ? 'bg-teal-50 text-teal-700'
+                    ? 'bg-navy-50 text-navy-700'
                     : 'text-ink-soft hover:bg-surface hover:text-ink'
                 }`}
               >
@@ -73,7 +73,7 @@ export function Header() {
             href={ctaUrl({ placement: 'header' })}
             target="_blank"
             rel="noopener"
-            className="hidden items-center gap-1.5 rounded-pill bg-teal px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-teal-600 sm:inline-flex"
+            className="hidden items-center gap-1.5 rounded-pill bg-navy px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-navy-600 sm:inline-flex"
           >
             Tư vấn ngay
             <ArrowUpRight className="size-3.5" />
@@ -105,7 +105,7 @@ export function Header() {
               href={ctaUrl({ placement: 'header-mobile' })}
               target="_blank"
               rel="noopener"
-              className="mt-2 block rounded-xl bg-teal px-4 py-3 text-center font-semibold text-white"
+              className="mt-2 block rounded-xl bg-navy px-4 py-3 text-center font-semibold text-white"
             >
               Đặt lịch tư vấn
             </a>

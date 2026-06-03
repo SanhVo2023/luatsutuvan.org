@@ -73,42 +73,42 @@ export default function ContactPage() {
               </h3>
               <ul className="mt-4 space-y-4 text-sm">
                 <li className="flex gap-3">
-                  <MapPin className="mt-0.5 size-5 shrink-0 text-teal" />
+                  <MapPin className="mt-0.5 size-5 shrink-0 text-navy" />
                   <div>
                     <p className="font-medium text-ink">Trụ sở chính</p>
                     <p className="text-muted">{SITE.address}</p>
                   </div>
                 </li>
                 <li className="flex gap-3">
-                  <Building2 className="mt-0.5 size-5 shrink-0 text-teal" />
+                  <Building2 className="mt-0.5 size-5 shrink-0 text-navy" />
                   <div>
                     <p className="font-medium text-ink">Chi nhánh Đông Sài Gòn</p>
                     <p className="text-muted">{SITE.branchAddress}</p>
                   </div>
                 </li>
                 <li className="flex gap-3">
-                  <Phone className="mt-0.5 size-5 shrink-0 text-teal" />
+                  <Phone className="mt-0.5 size-5 shrink-0 text-navy" />
                   <div>
                     <p className="font-medium text-ink">Điện thoại</p>
-                    <a href={SITE.phoneHref} className="text-teal-700 hover:underline">
+                    <a href={SITE.phoneHref} className="text-navy-700 hover:underline">
                       {SITE.phone}
                     </a>
                   </div>
                 </li>
                 <li className="flex gap-3">
-                  <Mail className="mt-0.5 size-5 shrink-0 text-teal" />
+                  <Mail className="mt-0.5 size-5 shrink-0 text-navy" />
                   <div>
                     <p className="font-medium text-ink">Email</p>
-                    <a href={`mailto:${SITE.email}`} className="text-teal-700 hover:underline">
+                    <a href={`mailto:${SITE.email}`} className="text-navy-700 hover:underline">
                       {SITE.email}
                     </a>
                   </div>
                 </li>
                 <li className="flex gap-3">
-                  <MessageCircle className="mt-0.5 size-5 shrink-0 text-teal" />
+                  <MessageCircle className="mt-0.5 size-5 shrink-0 text-navy" />
                   <div>
                     <p className="font-medium text-ink">Zalo</p>
-                    <a href={SITE.zalo} target="_blank" rel="noopener" className="text-teal-700 hover:underline">
+                    <a href={SITE.zalo} target="_blank" rel="noopener" className="text-navy-700 hover:underline">
                       Apolo Lawyers
                     </a>
                   </div>
@@ -116,8 +116,8 @@ export default function ContactPage() {
               </ul>
             </div>
 
-            <div className="rounded-3xl border border-teal/20 bg-teal-50 p-6">
-              <span className="inline-flex items-center gap-2 text-teal-700">
+            <div className="rounded-3xl border border-navy/20 bg-navy-50 p-6">
+              <span className="inline-flex items-center gap-2 text-navy-700">
                 <Clock className="size-5" />
                 <span className="font-semibold">Phản hồi trong {TRUST.responseTime}</span>
               </span>

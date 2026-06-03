@@ -7,7 +7,7 @@ export const size = {
 }
 export const contentType = 'image/png'
 
-// Apple touch icon — teal brand with a balance-scale glyph.
+// Apple touch icon — oxford-navy brand with a gold balance-scale glyph.
 // Uses only inline SVG + background (no custom font) so it builds cleanly.
 export default function AppleIcon() {
   return new ImageResponse(
@@ -19,7 +19,7 @@ export default function AppleIcon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'linear-gradient(135deg, #0FA89C 0%, #0A8F85 100%)',
+          background: 'linear-gradient(135deg, #0B2A4A 0%, #08203A 100%)',
           borderRadius: 40,
         }}
       >
@@ -28,7 +28,7 @@ export default function AppleIcon() {
           height="120"
           viewBox="0 0 64 64"
           fill="none"
-          stroke="#FFFFFF"
+          stroke="#C2A14D"
           strokeWidth={3}
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -42,7 +42,7 @@ export default function AppleIcon() {
           <path d="M46 22 L51 33" />
           <path d="M12 33 Q18 41 24 33" />
           <path d="M40 33 Q46 41 52 33" />
-          <circle cx="32" cy="16" r="3" fill="#FFFFFF" />
+          <circle cx="32" cy="16" r="3" fill="#C2A14D" />
         </svg>
       </div>
     ),

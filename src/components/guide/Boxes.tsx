@@ -10,15 +10,15 @@ const VARIANTS = {
   info: {
     icon: Info,
     ring: 'border-info/25',
-    bg: 'bg-sky-50',
+    bg: 'bg-navy-50',
     iconBg: 'bg-info/12 text-info',
     label: 'Thông tin',
   },
   tip: {
     icon: Lightbulb,
-    ring: 'border-teal/25',
-    bg: 'bg-teal-50',
-    iconBg: 'bg-teal/12 text-teal-700',
+    ring: 'border-navy/25',
+    bg: 'bg-navy-50',
+    iconBg: 'bg-navy/12 text-navy-700',
     label: 'Mẹo từ luật sư',
   },
   warning: {
@@ -67,10 +67,10 @@ export function DefinitionBox({
   children: ReactNode
 }) {
   return (
-    <div className="not-prose my-7 overflow-hidden rounded-2xl border border-teal/20 bg-white shadow-soft">
-      <div className="flex items-center gap-2.5 border-b border-teal/15 bg-teal-50 px-5 py-3">
-        <BookMarked className="size-4 text-teal-700" />
-        <span className="font-heading font-semibold text-teal-700">{term}</span>
+    <div className="not-prose my-7 overflow-hidden rounded-2xl border border-navy/20 bg-white shadow-soft">
+      <div className="flex items-center gap-2.5 border-b border-navy/15 bg-navy-50 px-5 py-3">
+        <BookMarked className="size-4 text-navy-700" />
+        <span className="font-heading font-semibold text-navy-700">{term}</span>
       </div>
       <div className="px-5 py-4 text-[1.05rem] leading-relaxed text-ink-soft">
         {children}

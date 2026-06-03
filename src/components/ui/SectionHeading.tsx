@@ -17,13 +17,13 @@ export function SectionHeading({
       className={align === 'center' ? 'mx-auto max-w-2xl text-center' : 'max-w-2xl'}
     >
       {eyebrow && (
-        <p className="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-teal-700">
-          {align === 'center' && <span className="h-px w-6 bg-teal/40" />}
+        <p className="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-gold-600">
+          {align === 'center' && <span className="h-px w-6 bg-gold/50" />}
           {eyebrow}
-          <span className="h-px w-6 bg-teal/40" />
+          <span className="h-px w-6 bg-gold/50" />
         </p>
       )}
-      <h2 className="font-heading text-3xl font-bold leading-tight tracking-tight text-ink sm:text-4xl">
+      <h2 className="font-display text-[2rem] font-bold leading-[1.12] tracking-[-0.01em] text-ink sm:text-[2.5rem]">
         {title}
       </h2>
       {intro && (
